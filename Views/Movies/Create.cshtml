@@ -1,0 +1,53 @@
+﻿@model MoviesManagememtSystem.Models.Movie
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MovieName" class="control-label"></label>
+                <input asp-for="MovieName" class="form-control" />
+                <span asp-validation-for="MovieName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="plot" class="control-label"></label>
+                <input asp-for="plot" class="form-control" />
+                <span asp-validation-for="plot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="publishTime" class="control-label"></label>
+                <input asp-for="publishTime" class="form-control" />
+                <span asp-validation-for="publishTime" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsHit" /> @Html.DisplayNameFor(model => model.IsHit)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProduceDt" class="control-label"></label>
+                <input asp-for="ProduceDt" class="form-control" />
+                <span asp-validation-for="ProduceDt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
