@@ -6,10 +6,13 @@
     <title>@ViewData["Title"] - MoviesManagememtSystem</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
 </head>
-<body>
+<!--add background color and font family to whole body-->
+<body style="background-color:azure; font-family:cursive;">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-blanchedalmond border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MoviesManagememtSystem</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -18,16 +21,16 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
                         
+                        <!--Add Movie Artists to navigation bar-->
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="MovieArtists">Movie Artists</a>
                         </li>
+                        <!--add movies to navigation bar-->
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Movies">Movies</a>
                         </li>
+                        <!--Add Makers to navigation bar-->
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Makers">Maker</a>
                         </li>
@@ -42,10 +45,10 @@
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    <!--Add padding and text align in footer -->
+    <footer class="border-top footer text-muted" style="padding-top:100px; text-align:center;">
         <div class="container">
-            &copy; 2021 - MoviesManagememtSystem - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2021 - MoviesManagememtSystem - developed by Supreet Samra
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

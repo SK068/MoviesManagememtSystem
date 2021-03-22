@@ -3,13 +3,14 @@
 @{
     ViewData["Title"] = "Create";
 }
+<!--Use text align center to both h1 and h4-->
+<h1 style="text-align:center; ">Create</h1>
 
-<h1>Create</h1>
-
-<h4>Movie</h4>
+<h4 style="text-align:center; ">Movie</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <!--Give background color to table coloumns-->
+    <div class="col-md-4" style="background-color:blanchedalmond;">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">

@@ -1,8 +1,89 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<!--Add bootstrap theme-->
+<div class="tm-container mx-auto">
+    <section class="tm-section tm-section-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="tm-bg-circle-white tm-flex-center-v">
+                        <header class="text-center">
+                            <h1 class="tm-site-title">Movie Artists</h1>
+                            
+                        </header>
+                        <!--Add paragraph about movie artists-->
+                        <p>Film is considered to be an important art form, a source of popular entertainment and a powerful method for educating – or indoctrinating – citizens. Film may be combined with performance art and still be considered or referred to as a “film”, for instance, when there is a live musical accompaniment to a silent film.</p>
+                        <p class="text-center mt-4 mb-0">
+                            <!--link the continue button to movie artists page-->
+                            <a asp-area="" asp-controller="MovieArtists" class="btn tm-btn-secondary">Continue.....</a>
+                        </p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tm-section-2" class="tm-section pt-2 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 tm-flex-center-v tm-text-container tm-section-left">
+                    <!--change the heading to movies-->
+                    <h2 class="tm-color-secondary mb-4">Movies</h2>
+                    <p class="mb-4">
+                        <!--Add paragraph about movies-->
+                        Movie is a series of still images which creates the illusion of moving images when shown on the screen. We do not imagine our modern world without cinematography, so it is very important to analyze and differentiate films as nowadays they are the inalienable part of our culture. It is a popular entertainment, cultural product and the art of rich complexity.It is not an easy task to write thoughtfully about the film. You should clarify why you enjoyed or disliked the film and pay attention to its invisible elements. You should know the proper vocabulary.
+                    </p>
+                    <p class="mb-5">
+                        The cinema, the television and the radio are first and foremost educative media though they should also concentrate on entertainment. The educational value of a film is not given importance at all nowadays.
+                    </p>
+                    <p class="text-right mb-0">
+                        <!--link the continue button to movies page-->
+                        <a asp-area="" asp-controller="Movies" class="btn tm-btn-secondary">Continue.....</a>
+                    </p>
+                </div>
+                <div class="col-xl-7 col-lg-6 tm-circle-img-container">
+                    <img src="img/img-01.jpg" alt="Image" class="rounded-circle tm-circle-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tm-section-3" class="tm-section tm-section-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 tm-section-2-right">
+                    <div class="tm-bg-circle-white tm-bg-circle-pad-2 tm-flex-center-v">
+                        <header>
+                            <!--Change the heading to Movie Maker-->
+                            <h2 class="tm-color-primary">Movie Maker</h2>
+                        </header>
+                        <p>
+                            There are different types of producers who produce the movies such as..
+                        </p>
+                        <ul class="dashed">
+                            <li>Executive Producer</li>
+                            <li>Co-executive Producer</li>
+                            <li>Line Producer</li>
+                            <li>Supervising Producer</li>
+                        </ul>
+                        <p class="mb-5">
+                            <!--link the button to the Movie Maker page-->
+                            <a asp-area="" asp-controller="Makers" class="btn tm-btn-secondary">Continue.....</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+   
 </div>
+<script src="js/smooth-scroll.polyfills.min.js"></script>
+<!-- https://github.com/cferdinandi/smooth-scroll -->
+<script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            easing: 'easeInOutQuart',
+            speed: 800
+        });
+</script>
